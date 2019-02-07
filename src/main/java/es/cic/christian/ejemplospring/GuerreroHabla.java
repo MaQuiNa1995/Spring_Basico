@@ -1,5 +1,7 @@
 package es.cic.christian.ejemplospring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  *
  * @author MaQuina1995
@@ -20,6 +22,7 @@ public class GuerreroHabla {
      * Atributo con nombre guerrero de la clase InterfazHablar
      * 
      */
+	@Autowired
     private InterfaceHablar guerrero;
 
     /**

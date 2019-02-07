@@ -1,5 +1,7 @@
 package es.cic.christian.ejemplospring;
 
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author cmunoz
@@ -10,6 +12,7 @@ package es.cic.christian.ejemplospring;
  * Implementa la interfaz InterfaceHablar
  *
  */
+@Component("protos")
 public class Protos implements InterfaceHablar {
 
     /**

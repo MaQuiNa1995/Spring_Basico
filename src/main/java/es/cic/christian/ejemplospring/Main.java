@@ -1,6 +1,5 @@
 package es.cic.christian.ejemplospring;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -24,7 +23,7 @@ public class Main {
         /**
          * Definicion del AplicationContext 
          */
-        ApplicationContext context = new ClassPathXmlApplicationContext(
+    	ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
               "classpath:\\es\\cic\\christian\\ejemplospring\\spring-config.xml"
         );
         
@@ -39,9 +38,9 @@ public class Main {
          *      Bean --> GuerreroHabla
          * 
          */
-        GuerreroHabla guerreroHabla;
-        guerreroHabla = (GuerreroHabla) context.getBean("guerreroServices");
+        GuerreroHabla guerreroHabla = (GuerreroHabla) context.getBean("guerreroServices");
         
+        context.close();
         /**
          * 
          * 2 Líneas para localizar mejor la frase del guerrero 
