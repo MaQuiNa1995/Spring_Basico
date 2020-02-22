@@ -1,5 +1,5 @@
 # Conceptos básicos de spring
-Proyecto usado para la explicación de como se usa el spring core en la creacion de beans
+Proyecto usado para la explicación de como se usa el spring core en la creacion de beans e inyectado de estos
 
 Tenemos 3 mains que demuestran la inyección de beans de 3 maneras distintas
 
