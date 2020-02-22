@@ -12,11 +12,9 @@ import maquina1995.spring.basico.dominio.Mago;
  * Main que explica el uso de beans por xml
  * <p>
  * Para coger 1 bean del contexto del contenedor de spring desde una clase
- * estática NUNCA podrás usar el @Autowired o @Resource deberás instanciar el
+ * estática nunca podrás usar el @Autowired o @Resource deberás instanciar el
  * contexto y obtener a traves de los distintos métodos disponibles:
  * <p>
- * 
- * 
  * <li>Equivalente a @Resource
  * {@link AnnotationConfigApplicationContext#getBean(String,Class)}</li>
  * <p>

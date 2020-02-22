@@ -4,13 +4,37 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
 						http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+	<!-- Es el grupo de nuestro proyecto que indica la ruta que tendrá en nuestro 
+		repositorio o en el de maven central en el caso de que decidamos subirlo 
+		y hacerlo publico cada palabra está separada por un punto , esto representa 
+		las carpetas -->
 	<groupId>maquina1995</groupId>
+	<!-- Lo mismo que el de arriba solo que este es mas especifico si por ejemplo 
+		tenemos muchos productos nuestros queremos que estén en la misma ruta pero 
+		que cada uno sea independiente por eso este campo debe ser unico -->
 	<artifactId>spring.basico</artifactId>
+	<!-- Esto indica la versión actual del proyecto según los cambios que hagamos 
+		iremos subiendo de version la nomenclatura: MAJOR.MINOR.FIX-TYPE -->
 	<version>2.0.0-RELEASE</version>
+	<!-- El nombre de la aplicación -->
 	<name>spring_basico</name>
+	<!-- https://stackoverflow.com/questions/19759338/why-modelversion-of-pom-xml-is-necessary-and-always-set-to-4-0-0 -->
+	<modelVersion>4.0.0</modelVersion>
+	<!-- El empaquetado que tendrá la aplicación cuando se compile -->
 	<packaging>jar</packaging>
 
+	<properties>
+		<!-- Codificación del proyecto -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- En que version de java será compilado y ejecutado nuestro proyecto -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<!-- Para Poder acceder desde una clse estática al contenedor de spring 
+		tenemos que usar la siguiente dependencia no hace falta indicar como dependencia 
+		el core de spring ya que esta dependencia, tiene como dependencia (valga 
+		la rebundancia) spring core -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -18,11 +42,5 @@
 			<version>5.2.3.RELEASE</version>
 		</dependency>
 	</dependencies>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
 
 </project>

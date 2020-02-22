@@ -12,13 +12,9 @@ import maquina1995.spring.basico.dominio.Terran;
  * Main que explica el uso de beans por anotaciones
  * <p>
  * Para coger 1 bean del contexto del contenedor de spring desde una clase
- * estática
+ * estática nunca podrás usar el @Autowired o @Resource deberás instanciar el
+ * contexto y obtener a traves de los distintos métodos disponibles:
  * <p>
- * NUNCA podrás usar el @Autowired o @Resource deberás instancia el contexto y
- * obtener a traves de los distintos métodos disponibles:
- * <p>
- * 
- * 
  * <li>Equivalente a @Resource
  * {@link AnnotationConfigApplicationContext#getBean(String,Class)}</li>
  * <p>
