@@ -2,13 +2,30 @@ package maquina1995.spring.basico.main;
 
 import java.util.logging.Logger;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import maquina1995.spring.basico.dominio.Espadachin;
 import maquina1995.spring.basico.dominio.Mago;
 
 /**
- * main que explica el uso de beans por xml
+ * Main que explica el uso de beans por xml
+ * <p>
+ * Para coger 1 bean del contexto del contenedor de spring desde una clase
+ * estática NUNCA podrás usar el @Autowired o @Resource deberás instanciar el
+ * contexto y obtener a traves de los distintos métodos disponibles:
+ * <p>
+ * 
+ * 
+ * <li>Equivalente a @Resource
+ * {@link AnnotationConfigApplicationContext#getBean(String,Class)}</li>
+ * <p>
+ * <li>Equivalente a @Autowired
+ * {@link AnnotationConfigApplicationContext#getBean(Class)}</li>
+ * <p>
+ * <li>O bien obtenerle por ID:
+ * {@link AnnotationConfigApplicationContext#getBean(String)}</li>
+ * <p>
  * 
  * @author MaQuiNa1995
  *
