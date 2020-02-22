@@ -1,5 +1,7 @@
 package maquina1995.spring.basico.configuration;
 
+import java.util.logging.Logger;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +28,11 @@ import maquina1995.spring.basico.dominio.Mago;
 public class JavaConfig {
 
     /**
+     * Logger genérico de la clase
+     */
+    private static final Logger LOGGER = Logger.getLogger(JavaConfig.class.getName());
+
+    /**
      * No poner nada y poner: @Scope("singleton") es lo mismo
      * <p>
      * En este caso se comporta de manera de que cada vez que llames a Spring para
@@ -37,6 +44,8 @@ public class JavaConfig {
     @Scope("singleton")
     @Bean("espadachin")
     public Espadachin crearEspadachin() {
+	LOGGER.info("Se está creando un espadachín en el contexto");
+
 	Espadachin espadachin = new Espadachin();
 	// Seteamos un valor por defecto con fines didácticos
 	espadachin.setArma("Espadas Dobles");
@@ -52,6 +61,8 @@ public class JavaConfig {
     @Scope("prototype")
     @Bean("mago")
     public Mago crearMago() {
+	LOGGER.info("Se está creando un Mago en el contexto");
+
 	Mago mago = new Mago();
 	return mago;
     }

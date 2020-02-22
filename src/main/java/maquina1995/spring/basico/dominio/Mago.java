@@ -2,6 +2,9 @@ package maquina1995.spring.basico.dominio;
 
 public class Mago {
 
+    // Como podeis ver se están seteando valores por defecto a arma y daño para que
+    // veais como se comporta spring
+
     private String arma = "bastón";
     private int danno = 1000;
 

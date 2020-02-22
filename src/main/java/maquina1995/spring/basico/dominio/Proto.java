@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 @Scope("singleton")
 public class Proto {
 
+    // Como podeis ver se están seteando valores por defecto a arma y daño para que
+    // veais como se comporta spring
+
     private String arma = "Cuchilla Energética";
     private int danno = 1000;
 

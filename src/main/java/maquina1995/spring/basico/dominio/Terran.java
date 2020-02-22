@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Terran {
 
+    // Como podeis ver se están seteando valores por defecto a arma y daño para que
+    // veais como se comporta spring
+
     private String arma = "Metralleta";
     private int danno = 100;
 

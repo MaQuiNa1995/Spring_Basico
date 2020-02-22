@@ -1,6 +1,15 @@
 package maquina1995.spring.basico.dominio;
 
+/**
+ * Clase que representa un espadachín
+ * 
+ * @author MaQuiNa1995
+ *
+ */
 public class Espadachin {
+
+    // Como podeis ver se están seteando valores por defecto a arma y daño para que
+    // veais como se comporta spring
 
     private String arma = "Estoque";
     private int danno = 100;
